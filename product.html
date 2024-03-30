@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Lucky Electricals Gh - Products</title>
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
     <!-- CDN CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css">
+
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -27,10 +37,8 @@
                 <i class="bi bi-phone d-flex align-items-center ms-4"><span>: 030 2542 886, 024 4211 251 </span></i>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                <a href="https://web.facebook.com/NLESPECIALCABLES" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/newluckyelectricals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
             </div>
         </div>
     </section><!-- End Top Bar -->
@@ -49,7 +57,6 @@
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <a href="product.html" class="nav-item nav-link active">Products</a>
-                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
         </nav>
 
@@ -57,92 +64,446 @@
 
 
            
- <!-- ======= Contact Section ======= -->
- <section id="contact" class="contact">
-
-    <div class="container" data-aos="fade-up">
-
-      <header class="section-header">
-        <h2>Products</h2>
-        <p>Connect with us easily. Reach out for inquiries, assistance, or collaborations. We're here to help!</p>
-      </header>
-
-      <div class="row gy-4">
-
-        <div class="col-lg-6">
-
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-geo-alt"></i>
-                <h3>Address</h3>
-                <p>A108 Adam Street,<br>New York, NY 535022</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-telephone"></i>
-                <h3>Call Us</h3>
-                <p>+233 24 2971 338<br>+233 24 4211 251</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-envelope"></i>
-                <h3>Email Us</h3>
-                <p>info@newluckyelectrical.com</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box">
-                <i class="bi bi-clock"></i>
-                <h3>Open Hours</h3>
-                <p>Monday - Friday<br>9:00AM - 05:00PM</p>
-              </div>
+          <!-- ======= Products Section ======= -->
+    <section id="main-products " class="main-products section-bg page-padding">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>Products</h2>
+            <p>Explore our affordable range of quality products, designed to power up your life without draining your wallet. From everyday essentials to sleek innovations, we've got you covered.</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+              <ul id="main-products-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-lighting">Lighting</li>
+                <li data-filter=".filter-switchgear">Switchgear and Protection Devices</li>
+                <li data-filter=".filter-control">Control and Automation</li>
+                <li data-filter=".filter-powermgt">Distribution and Power Management</li>
+                <li data-filter=".filter-vent">Comfort and Ventilation</li>
+                <li data-filter=".filter-infrastructure">Infrastructure Materials</li>
+                <li data-filter=".filter-electrical">Electrical Components</li>
+                <li data-filter=".filter-powergen">Power Generation</li>
+              </ul>
             </div>
           </div>
-
-        </div>
-
-        <div class="col-lg-6">
-          <form action="submit_form.php" method="post" class="php-email-form">
-            <div class="row gy-4">
-
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-              </div>
-
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-              </div>
-
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-              </div>
-
-              <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-              </div>
-
-              <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                <button type="submit">Send Message</button>
-              </div>
-
+  
+        <div class="row main-products-container" data-aos="fade-up" data-aos-delay="200">
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/tracklight.png" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED Track Lighting</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/tracklight.png" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED Track Lighting"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </form>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-control">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/motor starter.png" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Motor Starter</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/motor starter.png" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Motor Starter"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/downlight.png" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4> LED Downlight</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/downlight.png" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED Downlight"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-switchgear">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/digital mcb.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Digital MCCB (Molded Case Circuit Breaker)</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/digital mcb.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Digital MCCB (Molded Case Circuit Breaker)"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-control">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/programmable time switch.png" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Programmable Time Switch</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/programmable time switch.png" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Programmable Time Switch"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/flood lights.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED Flood Light</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/flood lights.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED Flood Light"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-switchgear">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/surge protection device.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Surge Protection Device</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/surge protection device.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Surge Protection Device"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-switchgear">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/changeover.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Changing Over Switch</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/changeover.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Changing Over Switch"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/LED Spot Lights.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED Spot Lights</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/LED Spot Lights.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED Spot Lights"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-control">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/VFD.jpeg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Variable Frequency Drives (VFDs)</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/VFD.jpeg" data-gallery="main-productsGallery" class="main-products-lightbox"
+                                title="Variable Frequency Drives (VFDs)"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/louver fitting.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED LOUVER FITTING</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/louver fitting.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED LOUVER FITTING"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-powergen">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/Generator.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Portable Generator</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/Generator.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Generator"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/LED-tube.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED Tube Light</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/LED-tube.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED Tube Light"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-switchgear">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/mcb breaker.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>MCB (Miniature Circuit Breaker)</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/mcb breaker.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="MCB (Miniature Circuit Breaker)"><i
+                                    class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-powergen">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/Industrial Generator.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Industrial Generator</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/Industrial Generator.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Industrial Generator"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/UV LED LIGHT.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>UV LED LIGHT</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/UV LED LIGHT.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="UV LED LIGHT"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/LED High Bay Lights.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED High Bay Lights</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/LED High Bay Lights.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED High Bay Lights"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-powermgt">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/distribution board.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Distribution Board</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/distribution board.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Distribution Board"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/UFO LED High Bay Light.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>UFO LED High Bay Light</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/UFO LED High Bay Light.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="UFO LED High Bay Light"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-powermgt">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/Rotary Phase Converter.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Rotary Phase Converter</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/Rotary Phase Converter.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Rotary Phase Converter"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-powermgt">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/Feeder Pillar.png" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Feeder Pillars</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/Feeder Pillar.png" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Feeder Pillars"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-lighting">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/LED Solar Street Lights.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>LED Solar Street Lights</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/LED Solar Street Lights.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="LED Solar Street Lights"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-vent">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/Ceiling Fans.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Ceiling Fans</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/Ceiling Fans.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Ceiling Fans"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-electrical">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/electrical-cables-.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Electrical Cables</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/electrical-cables-.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Electrical Cables"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-4 col-md-6 main-products-item filter-vent">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/standing-fan.jpg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Standing Fans</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/standing-fan.jpg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Standing Fans"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 main-products-item filter-electrical">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/sockets.jpeg" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Electrical Sockets</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/sockets.jpeg" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Electrical Sockets"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-4 col-md-6 main-products-item filter-infrastructure">
+                <div class="main-products-wrap">
+                    <img src="assets/img/products/pvc pipe.png" class="img-fluid" alt="">
+                    <div class="main-products-info">
+                        <h4>Pipes</h4>
+                        <div class="main-products-links">
+                            <a href="assets/img/products/pvc pipe.png" data-gallery="main-productsGallery"
+                                class="main-products-lightbox" title="Pipes"><i class="bx bx-plus"></i></a>
+                            <a href="main-products-details.html" class="main-products-details-lightbox" data-glightbox="type: external"
+                                title="main-products Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-      </div>
 
-    </div>
-
-  </section><!-- End Contact Section -->
-
+  
+        </div>
+      </section><!-- End main-products Section -->
+    <!-- Products section end -->
 
     
   <!-- Footer -->
@@ -167,17 +528,17 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
             <p>
-              <a class="text-white">Home</a>
+              <a class="text-white" href="index.html">Home</a>
             </p>
             <p>
-              <a class="text-white">About Us</a>
+              <a class="text-white" href="about.html">About Us</a>
             </p>
             <p>
-              <a class="text-white">Products</a>
+              <a class="text-white" href="product.html">Products</a>
             </p>
-            <p>
-              <a class="text-white">Gallery</a>
-            </p>
+            <!-- <p>
+              <a class="text-white" href="gallery.html">Gallery</a>
+            </p> -->
           </div>
 
           <hr class="w-100 clearfix d-md-none" />
@@ -197,34 +558,21 @@
             <a
                class="btn btn-primary btn-floating m-1"
                style="background-color: #3b5998"
-               href="#!"
+               href="https://web.facebook.com/NLESPECIALCABLES"
+               target="_blank"
                role="button"
                ><i class="fab fa-facebook-f"></i
               ></a>
 
             <a
                class="btn btn-primary btn-floating m-1"
-               style="background-color: #55acee"
-               href="#!"
-               role="button"
-               ><i class="fab fa-twitter"></i
-              ></a>
-
-            <a
-               class="btn btn-primary btn-floating m-1"
                style="background-color: #ac2bac"
-               href="#!"
+               href="https://www.instagram.com/newluckyelectricals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                role="button"
+               target="_blank"
                ><i class="fab fa-instagram"></i
               ></a>
 
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #0082ca"
-               href="#!"
-               role="button"
-               ><i class="fab fa-linkedin-in"></i
-              ></a>
 
           </div>
         </div>
@@ -243,12 +591,18 @@
   </footer>
   <!-- Footer -->
 
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
 
         <!-- CDN Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/dist/boxicons.min.js"></script>
 
         <!-- Main JS -->
         <script src="assets/js/main.js"></script>

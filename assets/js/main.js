@@ -1,16 +1,42 @@
 (function ($) {
     "use strict";
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner(0);
+    
+  /**
+   * Easy selector helper function
+   */
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
 
+  /**
+   * Easy event listener function
+   */
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
+    }
+  }
+
+ /**
+   * Preloader
+   */
+ let preloader = select('#preloader');
+ if (preloader) {
+   window.addEventListener('load', () => {
+     preloader.remove()
+   });
+ }
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -21,19 +47,21 @@
         }
     });
 
-    
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    }); 
+ /**
+   * Scroll top button
+   */
+ const scrollTop = document.querySelector('.scroll-top');
+ if (scrollTop) {
+   const togglescrollTop = function() {
+     window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+   }
+   window.addEventListener('load', togglescrollTop);
+   document.addEventListener('scroll', togglescrollTop);
+   scrollTop.addEventListener('click', window.scrollTo({
+     top: 0,
+     behavior: 'smooth'
+   }));
+ }
 
       /**
    * Animation on scroll function and init
@@ -50,6 +78,68 @@
     aos_init();
   });
 
+ /**
+   * Porfolio isotope and filter
+   */
+ window.addEventListener('load', () => {
+  let mainproductsContainer = select('.main-products-container');
+  if (mainproductsContainer) {
+    let mainproductsIsotope = new Isotope(mainproductsContainer, {
+      itemSelector: '.main-products-item'
+    });
+
+    let mainproductsFilters = select('#main-products-flters li', true);
+
+    on('click', '#main-products-flters li', function(e) {
+      e.preventDefault();
+      mainproductsFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      mainproductsIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      mainproductsIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+    }, true);
+  }
+
+});
+
+/**
+ * Initiate Main Products lightbox 
+ */
+const mainproductsLightbox = GLightbox({
+  selector: '.main-products-lightbox'
+});
+
+/**
+ * Initiate Main Products details lightbox 
+ */
+const mainproductsDetailsLightbox = GLightbox({
+  selector: '.main-products-details-lightbox',
+  width: '90%',
+  height: '90vh'
+});
+
+/**
+ * Main Products details slider
+ */
+new Swiper('.main-products-details-slider', {
+  speed: 400,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
 
 })(jQuery);
 
@@ -87,3 +177,21 @@ var swiper = new Swiper(".brandSwiper", {
       }
   });  
 
+  var swiper = new Swiper(".product-swiper", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    pagination: {
+      el: "#mobile-products .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      980: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      }
+    },
+  });      

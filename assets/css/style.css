@@ -30,7 +30,7 @@ body {
 }
 
 a {
-    color: var(--color-text);
+  color: var(--color-text);
     text-decoration: none;
 }
 
@@ -45,6 +45,81 @@ h4,
 h5,
 h6 {
     font-family: var(--font-primary);
+}
+
+.page-padding{
+  padding-top: 120px;
+}
+
+/*--------------------------------------------------------------
+# Scroll top button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background: rgba(13, 66, 255, 0.8);
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #0563bb;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -444,12 +519,6 @@ section {
     color: var(--color-primary);
   }
   
-  .product .card p {
-    padding: 0 30px;
-    margin-bottom: 30px;
-    color: var(--color-secondary);
-    font-size: 15px;
-  }
   
   .product .card:hover .card-img img {
     transform: scale(1.1);
@@ -458,7 +527,26 @@ section {
   .product .product-more{
     margin-top: 50px;
   }
+
+  .product .product-more button{
+    padding: 10px 50px 10px 50px;
+    border: var(--color-primary) solid 1px;
+    background-color: transparent;
+  }
+  .product .product-more a button {
+  color: #000;
+  }
   
+  .product .product-more button:hover{
+    background: var(--color-primary);
+    transition: 0.5 ease;
+    color: #fff;
+}
+  .product .product-more button a:hover{
+    transition: 0.5 ease;
+    color: #fff;
+}
+
   @media (max-width: 991.98px) {
     .product .card .card-img img{
       width: 100%;
@@ -556,124 +644,24 @@ section {
 
 /* # footer */
 
-.footer {
-  font-size: 14px;
-  background-color: #008374;
-  padding: 50px 0;
-  color: white;
+footer .footer-brand img{
+  width: 110%;
+  margin-bottom: 50px;
 }
 
-.footer .footer-info .logo {
-  line-height: 0;
-  margin-bottom: 25px;
+/* @media (max-width: 991.98px) {
+  footer .footer-brand img{
+    width: 150%;
+  }
+} */
+
+@media (max-width: 479.98px) {
+  footer .footer-brand img{
+    width: 100%;
+  }
 }
 
-.footer .footer-info .logo img {
-  max-height: 40px;
-  margin-right: 6px;
-}
 
-.footer .footer-info .logo span {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fff;
-  font-family: var(--font-primary);
-}
-
-.footer .footer-info p {
-  font-size: 14px;
-  font-family: var(--font-primary);
-}
-
-.footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-right: 10px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #fff;
-  border-color: #fff;
-}
-
-.footer h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-.footer .footer-links {
-  margin-bottom: 30px;
-}
-
-.footer .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer .footer-links ul i {
-  padding-right: 2px;
-  color: rgba(0, 131, 116, 0.8);
-  font-size: 12px;
-  line-height: 0;
-}
-
-.footer .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-.footer .footer-links ul a {
-  color: rgba(255, 255, 255, 0.7);
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-.footer .footer-links ul a:hover {
-  color: #fff;
-}
-
-.footer .footer-contact p {
-  line-height: 26px;
-}
-
-.footer .copyright {
-  text-align: center;
-}
-
-.footer .credits {
-  padding-top: 4px;
-  text-align: center;
-  font-size: 13px;
-}
-
-.footer .credits a {
-  color: #fff;
-}
-
-/*--------------------------------------------------------------
-# About Us Page
---------------------------------------------------------------*/
-#about-page{
-  padding-top: 120px;
-}
 
 /*--------------------------------------------------------------
 # Contact
@@ -797,4 +785,162 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*--------------------------------------------------------------
+# Main-products
+--------------------------------------------------------------*/
+.main-products .main-products-item {
+  margin-bottom: 30px;
+}
+
+.main-products #main-products-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.main-products #main-products-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-products #main-products-flters li:hover,
+.main-products #main-products-flters li.filter-active {
+  color: #0563bb;
+}
+
+.main-products #main-products-flters li:last-child {
+  margin-right: 0;
+}
+
+.main-products .main-products-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(69, 80, 91, 0.8);
+}
+
+
+.main-products .main-products-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.main-products .main-products-wrap .main-products-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-products .main-products-wrap .main-products-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #d7dce1;
+  border-left: 3px solid #d7dce1;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.main-products .main-products-wrap .main-products-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #d7dce1;
+  border-right: 3px solid #d7dce1;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.main-products .main-products-wrap .main-products-info h4 {
+  font-size: 20px;
+  color: #45505b;
+  font-weight: 600;
+}
+
+.main-products .main-products-wrap .main-products-info p {
+  color: #45505b;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.main-products .main-products-wrap .main-products-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.main-products .main-products-wrap .main-products-links a {
+  color: #45505b;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.main-products .main-products-wrap .main-products-links a:hover {
+  color: #148af9;
+}
+
+.main-products .main-products-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.main-products .main-products-wrap:hover .main-products-info {
+  opacity: 1;
+}
+
+.main-products .main-products-wrap:hover .main-products-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.main-products .main-products-wrap:hover .main-products-info::after {
+  bottom: 15px;
+  right: 15px;
 }
