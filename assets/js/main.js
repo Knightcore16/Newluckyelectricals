@@ -201,21 +201,25 @@ var swiper = new Swiper(".brandSwiper", {
   });
   
   document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault(); 
-      
-      var fname = document.getElementById("fname").value;
-      var lname = document.getElementById("lname").value;
-      var email = document.getElementById("email").value;
-      var phonenumber = document.getElementById("phonenumber").value;
-      var message = document.getElementById("message").value;
-      
-      var whatsappMessage = "Hi, I am " + fname + " " + lname + ". My Email is " + email + ", Phone Number is " + phonenumber + ". " + message;
-      
-      var encodedMessage = encodeURIComponent(whatsappMessage);
-      
-      var whatsappAPIURL = "https://api.whatsapp.com/send/?phone=233205007156" + "&text=" + encodedMessage + "&type=phone_number&app_absent=0";
-      window.open(whatsappAPIURL, '_blank');
-    });
+    var contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var phonenumber = document.getElementById("phonenumber").value;
+        var message = document.getElementById("message").value;
+        
+        var whatsappMessage = "Hi, I am " + fname + " " + lname + ". My Email is " + email + ", Phone Number is " + phonenumber + ". " + message;
+        
+        var encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        var whatsappAPIURL = "https://api.whatsapp.com/send/?phone=233205007156" + "&text=" + encodedMessage + "&type=phone_number&app_absent=0";
+        window.open(whatsappAPIURL, '_blank');
+      });
+    }
   });
+  
   
