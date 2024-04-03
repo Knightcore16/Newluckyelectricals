@@ -35,7 +35,7 @@
  if (preloader) {
    setTimeout(() => {
      preloader.remove();
-   }, 6000); 
+   }, 4500); 
  
    window.addEventListener('load', () => {
      preloader.remove();
